@@ -12,20 +12,21 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import Image from "next/image";
-
+import { useRouter } from "next/navigation";
 export default function SidebarDrawer({ isOpen, onClose }) {
+  const router = useRouter();
   // Disable background scroll
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
 
   const menuItems = [
-    { label: "Home", icon: Home },
-    { label: "Explore Colleges", icon: GraduationCap },
-    { label: "About Us", icon: Info },
-    { label: "Contact Us", icon: HelpCircle },
-    { label: "Login", icon: LogIn },
-    { label: "Register", icon: UserPlus },
+    { label: "Home", icon: Home, path: "/home" },
+    { label: "Explore Colleges", icon: GraduationCap, path: "/home" },
+    { label: "About Us", icon: Info, path: "/about" },
+    { label: "Contact Us", icon: HelpCircle, path: "/contact" },
+    { label: "Login", icon: LogIn, path: "/login" },
+    { label: "Register", icon: UserPlus, path: "/register" },
   ];
 
   return (
@@ -72,6 +73,10 @@ export default function SidebarDrawer({ isOpen, onClose }) {
                     whileHover={{ x: 6 }}
                     whileTap={{ scale: 0.97 }}
                     className="flex items-center gap-4 py-5 border-b border-cyan-100 cursor-pointer"
+                    onClick={() => {
+                      router.push(item.path);
+                      onClose();
+                    }}
                   >
                     <Icon size={24} className="text-cyan-500" />
                     <span className="text-lg font-medium text-cyan-600">
