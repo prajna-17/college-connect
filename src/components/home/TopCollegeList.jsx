@@ -119,7 +119,7 @@ export default function TopCollegesList() {
                   whileTap={{ scale: 0.95 }}
                   whileHover={{ scale: 1.02 }}
                   className="w-1/2 border-2 border-cyan-500 text-cyan-600 py-2 rounded-lg font-medium transition hover:bg-cyan-50"
-                  onClick={() => alert("View Details Clicked")}
+                  onClick={() => router.push(`/details`)}
                 >
                   View Details
                 </motion.button>
