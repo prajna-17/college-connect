@@ -4,27 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight } from "lucide-react";
+import { AddmissionProcessesData } from "@/data";
 
-const processes = [
-  {
-    title: "Entrance Exam",
-    icon: "/img/exam.png",
-    content:
-      "Candidates must appear for JEE Main or university entrance examination. Selection is based on merit and exam performance.",
-  },
-  {
-    title: "Cutoff & Shortlisting",
-    icon: "/img/cutoff.png",
-    content:
-      "Based on exam results, cutoff marks are released. Eligible candidates are shortlisted for counseling and document verification.",
-  },
-  {
-    title: "Final Admission",
-    icon: "/img/admission.png",
-    content:
-      "After verification and fee submission, final admission confirmation is granted. Students receive enrollment details.",
-  },
-];
 
 export default function AdmissionProcess() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -41,7 +22,7 @@ export default function AdmissionProcess() {
       </h2>
 
       <div className="flex flex-col gap-6">
-        {processes.map((item, index) => (
+        {AddmissionProcessesData.map((item, index) => (
           <div key={index}>
             {/* Card */}
             <motion.div

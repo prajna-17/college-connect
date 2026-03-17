@@ -9,6 +9,7 @@ import {
   HelpCircle,
   LogIn,
   UserPlus,
+  Calculator, 
 } from "lucide-react";
 import { useEffect } from "react";
 import Image from "next/image";
@@ -27,6 +28,7 @@ export default function SidebarDrawer({ isOpen, onClose }) {
     { label: "Contact Us", icon: HelpCircle, path: "/contact" },
     { label: "Login", icon: LogIn, path: "/login" },
     { label: "Register", icon: UserPlus, path: "/register" },
+    { label: "Fee Calculator", icon: Calculator, path: "/fee-calculator" },
   ];
 
   return (

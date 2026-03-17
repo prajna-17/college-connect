@@ -2,29 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-const highlights = [
-  {
-    title: "Courses :",
-    value: "45+",
-    icon: "/img/courses.png",
-  },
-  {
-    title: "Avg Fees :",
-    value: "Rs. 2.4 L/Year",
-    icon: "/img/fees.png",
-  },
-  {
-    title: "Total Seat :",
-    value: "1535",
-    icon: "/img/seats.png",
-  },
-  {
-    title: "Campus :",
-    value: "120 Acres",
-    icon: "/img/campus.png",
-  },
-];
+import {KeyhighlightsData} from "@/data";
 
 export default function KeyHighlights() {
   return (
@@ -34,7 +12,7 @@ export default function KeyHighlights() {
 
       {/* Grid */}
       <div className="grid grid-cols-2 gap-4">
-        {highlights.map((item, index) => (
+        {KeyhighlightsData.map((item, index) => (
           <motion.div
             key={index}
             whileHover={{

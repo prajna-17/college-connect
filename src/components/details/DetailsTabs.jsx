@@ -1,10 +1,11 @@
 "use client";
 
+
 import { useState } from "react";
 
 const tabs = ["Info", "Courses & Fees", "Cutoff", "Placement"];
 
-export default function DetailsTabs() {
+export default function DetailsTabs({college}) {
   const [activeTab, setActiveTab] = useState("Info");
 
   return (
@@ -30,20 +31,9 @@ export default function DetailsTabs() {
       <div className="mt-6">
         {activeTab === "Info" && (
           <div>
-            <h2 className="text-xl font-semibold mb-3">More About UIT</h2>
+            <h2 className="text-xl font-semibold mb-3">More About {college.name}</h2>
             <p className="text-black font-medium leading-relaxed text-[15px]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum is simply dummy
-              text of the printing and typesetting industry. Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry. Lorem
-              Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum is simply dummy
-              text of the printing and typesetting industry. Lorem Ipsum is
-              simply dummy text of the printing and typesetting industry!!
+             {college.desc}
             </p>
           </div>
         )}

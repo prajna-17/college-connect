@@ -1,15 +1,16 @@
 "use client";
 
+
 import Image from "next/image";
 import { MapPin, Star, Download, ChevronRight } from "lucide-react";
 
-export default function DetailsHero() {
+export default function DetailsHero({ college }) {
   return (
     <section className="relative w-full">
       {/* Background Image */}
       <div className="relative w-full h-[250px]">
         <Image
-          src="/img/uit.jpeg" // replace later
+          src={college.image} // replaced
           alt="College Background"
           fill
           className="object-cover"
@@ -22,8 +23,8 @@ export default function DetailsHero() {
             {/* Round Logo */}
             <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg bg-white">
               <Image
-                src="/img/college-logo.jpg" // replace later
-                alt="College Logo"
+                 src={college.logo}
+                 alt={college.name}
                 width={80}
                 height={80}
                 className="object-cover w-full h-full"
@@ -33,21 +34,19 @@ export default function DetailsHero() {
             {/* College Info */}
             <div>
               <h1 className="text-lg md:text-3xl font-semibold leading-snug">
-                Uttaranchal University Of
-                <br />
-                Technology (UIT)
+               {college.name}
               </h1>
 
               {/* Location */}
               <div className="flex items-center gap-2 mt-2 text-sm">
                 <MapPin className="text-red-500" size={18} />
-                <span>Dehradun, Uttarakhand</span>
+                <span><p>{college.location}</p></span>
               </div>
 
               {/* Rating */}
               <div className="flex items-center gap-2 mt-1 text-sm">
                 <Star className="text-orange-400 fill-orange-400" size={18} />
-                <span>4.5 (2.5k Reviews)</span>
+                <span>{college.rating}</span>
               </div>
             </div>
           </div>

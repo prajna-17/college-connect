@@ -2,35 +2,17 @@
 
 import { useRef } from "react";
 import Image from "next/image";
+import { colleges } from "@/data";
+import { useRouter } from "next/navigation";
 
-const colleges = [
-  { name: "BFIT", location: "Dehradun", image: "/img/bfit1.jpeg", rating: 4.5 },
-  {
-    name: "DIT University",
-    location: "Dehradun",
-    image: "/img/dit.jpeg",
-    rating: 4.5,
-  },
-  {
-    name: "JBIT College",
-    location: "Dehradun",
-    image: "/img/jbit.jpeg",
-    rating: 4.5,
-  },
-  { name: "UIT", location: "Dehradun", image: "/img/uit.jpeg", rating: 4.5 },
-  {
-    name: "BFIT",
-    location: "Dehradun",
-    image: "/img/jbit.jpeg",
-    rating: 4.5,
-  },
-];
 
 export default function PopularColleges() {
   const scrollRef = useRef(null);
+  const router = useRouter();
 
   return (
     <>
+    
       <style>{`
         /* Hide scrollbar cross-browser */
         .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -146,6 +128,7 @@ export default function PopularColleges() {
             <div
               key={index}
               className="college-card"
+              onClick={() => router.push(`/details/${college.id}`)}
               style={{
                 flexShrink: 0,
                 /* Shows ~2.5 cards at once, matching the screenshot */

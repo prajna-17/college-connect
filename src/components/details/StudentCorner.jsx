@@ -2,30 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import { reviewsData } from "@/data";
 
-const reviews = [
-  {
-    rating: 4.5,
-    quote: "Great placement and supportive faculty",
-    name: "Rahul S.",
-    course: "B.Tech CSE",
-    batch: "2025 Batch",
-  },
-  {
-    rating: 4.5,
-    quote: "Excellent campus life and exposure",
-    name: "Ananya K.",
-    course: "B.Tech IT",
-    batch: "2024 Batch",
-  },
-  {
-    rating: 4.5,
-    quote: "Good infrastructure and labs",
-    name: "Vikram P.",
-    course: "Mechanical Engineering",
-    batch: "2023 Batch",
-  },
-];
 
 export default function StudentCorner() {
   return (
@@ -44,7 +22,7 @@ export default function StudentCorner() {
 
       {/* Cards */}
       <div className="flex flex-col gap-8">
-        {reviews.map((review, index) => (
+        {reviewsData.map((review, index) => (
           <motion.div
             key={index}
             whileHover={{

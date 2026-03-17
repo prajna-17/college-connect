@@ -3,53 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { courseData } from "@/data";
 
-const courseData = {
-  UG: [
-    {
-      title: "BBA | Bachelor of Business Administration",
-      duration: "3 Years",
-      fees: "Rs. 1 - 1.5 Lakhs",
-      colleges: 25,
-    },
-    {
-      title: "BCA | Bachelor of Computer Applications",
-      duration: "3 Years",
-      fees: "Rs. 1.2 - 1.8 Lakhs",
-      colleges: 20,
-    },
-  ],
-
-  PG: [
-    {
-      title: "PGDM | Post Graduate Diploma Management",
-      duration: "2 Years",
-      fees: "Rs. 2 - 2.5 Lakhs",
-      colleges: 30,
-    },
-    {
-      title: "MBA | Master of Business Administration",
-      duration: "2 Years",
-      fees: "Rs. 2.5 - 3 Lakhs",
-      colleges: 28,
-    },
-  ],
-
-  Diploma: [
-    {
-      title: "Diploma in Engineering",
-      duration: "3 Years",
-      fees: "Rs. 80k - 1.2 Lakhs",
-      colleges: 18,
-    },
-    {
-      title: "Diploma in Pharmacy",
-      duration: "2 Years",
-      fees: "Rs. 90k - 1.3 Lakhs",
-      colleges: 15,
-    },
-  ],
-};
 
 export default function ExploreCourses() {
   const [activeTab, setActiveTab] = useState("PG");

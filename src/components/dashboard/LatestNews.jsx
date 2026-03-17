@@ -2,33 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import {  newsData  } from "@/data";
 
-const newsData = [
-  {
-    category: "Exam",
-    date: "26th Feb 2026",
-    title: "JEE Mains 2026 Exam Analysis ...",
-    description:
-      "It is a long established fact that a reader will be distracted...",
-    icon: "/img/exam.png",
-  },
-  {
-    category: "Courses",
-    date: "26th Feb 2026",
-    title: "Civil Engineering Courses ...",
-    description:
-      "It is a long established fact that a reader will be distracted...",
-    icon: "/img/courses.png",
-  },
-  {
-    category: "Exam",
-    date: "26th Feb 2026",
-    title: "JEE Mains 2026 Result Update ...",
-    description:
-      "It is a long established fact that a reader will be distracted...",
-    icon: "/img/exam.png",
-  },
-];
 
 export default function LatestNews() {
   return (

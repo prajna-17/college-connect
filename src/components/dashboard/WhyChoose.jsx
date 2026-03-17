@@ -2,37 +2,9 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { features } from "@/data";
 
-const features = [
-  {
-    title: "Accurate Results",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    icon: "/img/accurate.png",
-    bg: "bg-yellow-100",
-  },
-  {
-    title: "Personalized Recommendation",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    icon: "/img/personalized.png",
-    bg: "bg-green-100",
-  },
-  {
-    title: "Trusted By Thousand",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    icon: "/img/trusted.png",
-    bg: "bg-orange-100",
-  },
-  {
-    title: "Real Time Update",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    icon: "/img/realtime.png",
-    bg: "bg-pink-100",
-  },
-];
+
 
 export default function WhyChoose() {
   return (

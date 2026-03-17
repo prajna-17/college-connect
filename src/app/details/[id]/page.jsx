@@ -11,15 +11,27 @@ import AdmissionProcess from "@/components/details/AdmissionProcess";
 import CampusFacilities from "@/components/details/CampusFacilities";
 import StudentCorner from "@/components/details/StudentCorner";
 import CollegeContact from "@/components/details/CollegeContact";
+import { colleges } from "@/data";
+import { useParams } from "next/navigation";
 
 export default function AboutPage() {
+ const params = useParams();
+
+const college = colleges.find(
+(item) => item.id === params.id
+);
+if (!college) {
+  return <p>Loading...</p>;
+}
   return (
+    
     <>
+    <h1>{params.id}</h1>
       <Header />
       <main className="bg-gray-50 pb-20">
-        <DetailsHero />
-        <DetailsTabs />
-        <KeyHighlights />
+        <DetailsHero college={college} />
+       <DetailsTabs college={college} />
+        <KeyHighlights  college={college} />
         <Accreditations />
         <CoursesSection />
         <AdmissionProcess />

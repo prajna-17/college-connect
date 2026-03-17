@@ -2,61 +2,14 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { CoursesSectionData } from "@/data";
 
-const data = {
-  UG: [
-    {
-      title: "Bachelor Of Technology ( B. Tech )",
-      specs: [
-        "B.Tech in Information Technology",
-        "B.Tech in Aerospace Engineering",
-        "B.Tech in Mechanical Engineering",
-      ],
-    },
-    {
-      title: "Bachelor Of Science",
-      specs: [
-        "Bachelor of Science in Physics",
-        "Bachelor of Science in Chemistry",
-        "Bachelor of Science in Maths",
-      ],
-    },
-    {
-      title: "Bachelor Of Technology ( B. Tech )",
-      specs: [
-        "B.Tech in Information Technology",
-        "B.Tech in Aerospace Engineering",
-        "B.Tech in Mechanical Engineering",
-      ],
-    },
-  ],
-  PG: [
-    {
-      title: "Master Of Technology ( M.Tech )",
-      specs: [
-        "M.Tech in Civil Engineering",
-        "M.Tech in Computer Science",
-        "M.Tech in Electrical Engineering",
-      ],
-    },
-  ],
-  Diploma: [
-    {
-      title: "Diploma in Engineering",
-      specs: [
-        "Diploma in Mechanical",
-        "Diploma in Civil",
-        "Diploma in Electrical",
-      ],
-    },
-  ],
-};
 
 export default function CoursesSection() {
   const [activeTab, setActiveTab] = useState("UG");
   const [visibleCount, setVisibleCount] = useState(2);
 
-  const courses = data[activeTab];
+  const courses = CoursesSectionData[activeTab];
 
   return (
     <section className="w-full bg-white px-4 py-10">

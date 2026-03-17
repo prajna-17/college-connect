@@ -4,30 +4,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { exams } from "@/data";
 
-const exams = [
-  {
-    title: "CET 2026",
-    image: "/img/cet.png",
-    colleges: 30,
-    date: "Feb 26, 2026",
-    level: "Bachelors",
-  },
-  {
-    title: "JEE 2026",
-    image: "/img/jee.png",
-    colleges: 50,
-    date: "Jan 15, 2026",
-    level: "Engineering",
-  },
-  {
-    title: "NEET 2026",
-    image: "/img/neet.png",
-    colleges: 40,
-    date: "May 10, 2026",
-    level: "Medical",
-  },
-];
 
 export default function TopExams() {
   const [index, setIndex] = useState(0);

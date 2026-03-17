@@ -2,21 +2,8 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { accreditations } from "@/data";
 
-const accreditations = [
-  {
-    title: "AICTE Approved",
-    icon: "/img/accreditation.png",
-  },
-  {
-    title: "NAAC Grade A+",
-    icon: "/img/accreditation.png",
-  },
-  {
-    title: "INI",
-    icon: "/img/accreditation.png",
-  },
-];
 
 export default function Accreditations() {
   return (

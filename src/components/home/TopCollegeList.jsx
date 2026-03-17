@@ -3,38 +3,21 @@
 import { motion } from "framer-motion";
 import { MapPin, Trophy, BookOpen, Star } from "lucide-react";
 import { useRouter } from "next/navigation";
-const colleges = [
-  {
-    id: 1,
-    name: "Uttaranchal University Of Technology (UIT)",
-    location: "Dehradun, Uttarakhand",
-    image: "/img/uit.jpeg",
-    logo: "/img/logo1.png",
-    rating: "4.5",
-    accreditation: "AICTE +3",
-    exams: "CAT",
-  },
-  {
-    id: 2,
-    name: "Uttaranchal University Of Technology (UIT)",
-    location: "Dehradun, Uttarakhand",
-    image: "/img/bfit1.jpeg",
-    logo: "/img/logo1.png",
-    rating: "4.5",
-    accreditation: "AICTE +3",
-    exams: "CAT",
-  },
-  {
-    id: 3,
-    name: "Uttaranchal University Of Technology (UIT)",
-    location: "Dehradun, Uttarakhand",
-    image: "/img/dit.jpeg",
-    logo: "/img/logo1.png",
-    rating: "4.5",
-    accreditation: "AICTE +3",
-    exams: "CAT",
-  },
-];
+import { colleges } from "@/data/colleges";
+
+export default function PopularColleges() {
+  return (
+    <div>
+      {colleges.map((college) => (
+        <div key={college.id}>
+          <h3>{college.name}</h3>
+          <p>{college.location}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 
 export default function TopCollegesList() {
   const router = useRouter();

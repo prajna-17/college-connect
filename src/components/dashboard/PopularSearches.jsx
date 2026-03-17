@@ -3,52 +3,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { PopularSearchData } from "../../data";
 
-const data = [
-  {
-    title: "New Age Colleges",
-    items: [
-      "AI & Data Science Institutes",
-      "FinTech Colleges",
-      "Design & Creative Universities",
-      "Sustainable Technology Schools",
-    ],
-  },
-  {
-    title: "Courses",
-    items: [
-      "B.Tech Computer Science",
-      "MBA in Marketing",
-      "Civil Engineering",
-      "BCA & MCA Programs",
-    ],
-  },
-  {
-    title: "Entrance Exams",
-    items: ["JEE Main", "NEET", "CUET", "CAT"],
-  },
-  {
-    title: "Resources",
-    items: [
-      "Previous Year Papers",
-      "Syllabus PDF",
-      "College Comparison Tool",
-      "Rank Predictor",
-    ],
-  },
-  {
-    title: "Tools & Predictor",
-    items: ["College Predictor", "Exam Rank Predictor", "Fees Calculator"],
-  },
-  {
-    title: "College Admission Forms",
-    items: [
-      "Apply to Top Colleges",
-      "Track Application Status",
-      "Scholarship Forms",
-    ],
-  },
-];
+
 
 export default function PopularSearches() {
   const [active, setActive] = useState(null);
@@ -66,7 +23,7 @@ export default function PopularSearches() {
         </h2>
 
         <div className="space-y-5">
-          {data.map((section, index) => (
+          {PopularSearchData.map((section, index) => (
             <div key={index} className="border-b border-cyan-100 pb-4">
               {/* Header */}
               <button
