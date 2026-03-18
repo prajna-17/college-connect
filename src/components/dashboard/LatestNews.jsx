@@ -35,6 +35,8 @@ export default function LatestNews() {
                       src={item.icon}
                       alt={item.category}
                       fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+
                       className="object-contain"
                     />
                   </div>
@@ -62,3 +64,6 @@ export default function LatestNews() {
     </section>
   );
 }
+
+
+

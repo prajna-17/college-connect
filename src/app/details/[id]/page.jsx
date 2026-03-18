@@ -1,5 +1,7 @@
 "use client";
 
+import { useParams } from "next/navigation"; 
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DetailsHero from "@/components/details/DetailsHero";
@@ -12,26 +14,26 @@ import CampusFacilities from "@/components/details/CampusFacilities";
 import StudentCorner from "@/components/details/StudentCorner";
 import CollegeContact from "@/components/details/CollegeContact";
 import { colleges } from "@/data";
-import { useParams } from "next/navigation";
 
 export default function AboutPage() {
  const params = useParams();
 
-const college = colleges.find(
-(item) => item.id === params.id
-);
-if (!college) {
-  return <p>Loading...</p>;
-}
+ const college = colleges.find(
+ (item) => item.id === params.id
+ );
+
+ if (!college) {
+   return <p>Loading...</p>;
+ }
+
   return (
-    
     <>
-    <h1>{params.id}</h1>
+      <h1>{params.id}</h1>
       <Header />
       <main className="bg-gray-50 pb-20">
         <DetailsHero college={college} />
-       <DetailsTabs college={college} />
-        <KeyHighlights  college={college} />
+        <DetailsTabs college={college} />
+        <KeyHighlights college={college} />
         <Accreditations />
         <CoursesSection />
         <AdmissionProcess />

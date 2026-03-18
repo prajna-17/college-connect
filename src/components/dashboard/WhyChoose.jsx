@@ -53,8 +53,9 @@ export default function WhyChoose() {
                   <Image
                     src={item.icon}
                     alt={item.title}
-                    width={30}
-                    height={30}
+                    width={64}
+                    height={64}
+                    
                   />
                 </motion.div>
 

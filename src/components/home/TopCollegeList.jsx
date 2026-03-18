@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import { MapPin, Trophy, BookOpen, Star } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { colleges } from "@/data/colleges";
+import { colleges } from "@/data";
 
-export default function PopularColleges() {
+export  function PopularColleges() {
   return (
     <div>
       {colleges.map((college) => (
@@ -23,14 +23,15 @@ export default function TopCollegesList() {
   const router = useRouter();
   return (
     <section className="w-full bg-[#ffffff] py-10 px-4">
-      <div className="max-w-md mx-auto space-y-8">
+    <div className="flex overflow-x-auto gap-6 pb-4">
         {colleges.map((college) => (
           <motion.div
             key={college.id}
             onClick={() => router.push(`/details`)}
             whileHover={{ y: -6 }}
             transition={{ type: "spring", stiffness: 200 }}
-            className="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden"
+            className="bg-white rounded-2xl shadow-md hover:shadow-xl 
+  transition overflow-hidden w-[300px] flex-shrink-0"
           >
             {/* Image */}
             <div className="relative">

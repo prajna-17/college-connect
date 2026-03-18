@@ -62,6 +62,7 @@ export default function TopExams() {
                   src={exams[index].image}
                   alt={exams[index].title}
                   fill
+                  sizes="56px" 
                   className="object-contain p-2"
                 />
               </div>

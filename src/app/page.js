@@ -2,7 +2,7 @@ import Hero from "@/components/dashboard/Hero";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CategoryCards from "@/components/dashboard/CategoryCards";
-import PopularColleges from "@/components/dashboard/PopularColleges";
+import TopCollegesList from "@/components/home/TopCollegeList";
 import CampusBanner from "@/components/dashboard/CampusBanner";
 import ExploreCourses from "@/components/dashboard/ExploreCourses";
 import Welcome from "@/components/dashboard/Welcome";
@@ -20,7 +20,7 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <CategoryCards />
-        <PopularColleges />
+        <TopCollegesList />
         <CampusBanner />
         <ExploreCourses />
         <Welcome />
