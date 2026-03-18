@@ -48,15 +48,15 @@ export default function WhyChoose() {
                 <motion.div
                   whileHover={{ rotate: 8, scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className={`w-14 h-14 rounded-xl flex items-center justify-center ${item.bg}`}
+                 className={`w-14 h-14 rounded-xl flex items-center justify-center ${item.bg}`}
                 >
                   <Image
                     src={item.icon}
-                    alt={item.title}
-                    width={64}
-                    height={64}
-                    
-                  />
+                     alt={item.title}
+                     width={64}
+                     height={64}
+                     className="w-auto h-auto"
+/>
                 </motion.div>
 
                 <h3 className="text-lg font-semibold text-gray-900">

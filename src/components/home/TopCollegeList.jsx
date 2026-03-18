@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 
 import { motion } from "framer-motion";
 import { MapPin, Trophy, BookOpen, Star } from "lucide-react";
@@ -27,11 +27,10 @@ export default function TopCollegesList() {
         {colleges.map((college) => (
           <motion.div
             key={college.id}
-            onClick={() => router.push(`/details`)}
+           onClick={() => router.push(`/details/${college.id}`)}
             whileHover={{ y: -6 }}
             transition={{ type: "spring", stiffness: 200 }}
-            className="bg-white rounded-2xl shadow-md hover:shadow-xl 
-  transition overflow-hidden w-[300px] flex-shrink-0"
+           className="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden w-[300px] flex-shrink-0"
           >
             {/* Image */}
             <div className="relative">
@@ -103,7 +102,7 @@ export default function TopCollegesList() {
                   whileTap={{ scale: 0.95 }}
                   whileHover={{ scale: 1.02 }}
                   className="w-1/2 border-2 border-cyan-500 text-cyan-600 py-2 rounded-lg font-medium transition hover:bg-cyan-50"
-                  onClick={() => router.push(`/details`)}
+                 onClick={() => router.push("/details")}
                 >
                   View Details
                 </motion.button>

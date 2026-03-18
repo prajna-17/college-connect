@@ -11,14 +11,12 @@ export default function Header() {
       {/* Logo */}
       <div className="flex items-center">
         <Image
-          src="/img/logo.png" // change to your exact image name
-          alt="College Connect"
-          width={80}
-          height={40}
-          priority
-          style={{ width: "auto", height: "40px" }}
-          
-        />
+  src="/img/logo.png"
+  width={80}
+  height={40}
+  priority
+  className="h-10 w-auto"
+/>
       </div>
 
       {/* Right Icons */}
