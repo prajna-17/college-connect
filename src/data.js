@@ -116,7 +116,7 @@ export const exams = [
   },
   {
     title: "NEET 2026",
-    image: "/img/neet.png",
+    image: "/img/neet.jpg",
     colleges: 40,
     date: "May 10, 2026",
     level: "Medical",
@@ -130,7 +130,7 @@ export const exams = [
     title: "JEE Mains 2026 Exam Analysis ...",
     description:
       "It is a long established fact that a reader will be distracted...",
-    icon: "/img/exam.png",
+    icon: "/img/exam.jpg",
   },
   {
     category: "Courses",
@@ -146,7 +146,7 @@ export const exams = [
     title: "JEE Mains 2026 Result Update ...",
     description:
       "It is a long established fact that a reader will be distracted...",
-    icon: "/img/exam.png",
+    icon: "/img/exam.jpg",
   },
 ];
 
@@ -215,14 +215,14 @@ export const features = [
     title: "Trusted By Thousand",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    icon: "/img/trusted.png",
+    icon: "/img/trusted.jpg",
     bg: "bg-orange-100",
   },
   {
     title: "Real Time Update",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-    icon: "/img/realtime.png",
+    icon: "/img/realTime.jpg",
     bg: "bg-pink-100",
   },
 ];
@@ -348,13 +348,13 @@ export const facilities = [
  export const AddmissionProcessesData = [
   {
     title: "Entrance Exam",
-    icon: "/img/exam.png",
+    icon: "/img/exam1.jpg",
     content:
       "Candidates must appear for JEE Main or university entrance examination. Selection is based on merit and exam performance.",
   },
   {
     title: "Cutoff & Shortlisting",
-    icon: "/img/cutoff.png",
+    icon: "/img/cutoff.jpg",
     content:
       "Based on exam results, cutoff marks are released. Eligible candidates are shortlisted for counseling and document verification.",
   },
@@ -370,12 +370,12 @@ export const facilities = [
   {
     title: "Courses :",
     value: "45+",
-    icon: "/img/courses.png",
+    icon: "/img/courses1.png",
   },
   {
     title: "Avg Fees :",
     value: "Rs. 2.4 L/Year",
-    icon: "/img/fees.png",
+    icon: "/img/fees.jpg",
   },
   {
     title: "Total Seat :",
@@ -385,7 +385,7 @@ export const facilities = [
   {
     title: "Campus :",
     value: "120 Acres",
-    icon: "/img/campus.png",
+    icon: "/img/campus.jpg",
   },
 ];
  export const reviewsData = [

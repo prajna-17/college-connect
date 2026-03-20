@@ -30,16 +30,14 @@ export default function LatestNews() {
                     {item.category}
                   </span>
 
-                  <div className="w-8 h-8 relative">
-                    <Image
-                      src={item.icon}
-                      alt={item.category}
-                      fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-
-                      className="object-contain"
-                    />
-                  </div>
+                <div className="relative w-full h-48">
+                  <Image
+                   src={item.icon}
+                   fill
+                   sizes="(max-width: 768px) 100vw, 50vw"
+                   className="object-cover rounded-lg"
+  />
+</div>
                 </div>
 
                 <p className="text-sm text-gray-600">{item.date}</p>
