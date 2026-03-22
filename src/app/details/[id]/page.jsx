@@ -1,5 +1,5 @@
 "use client";
-
+ 
 import { useParams } from "next/navigation"; 
 
 import Header from "@/components/Header";
@@ -15,6 +15,7 @@ import StudentCorner from "@/components/details/StudentCorner";
 import CollegeContact from "@/components/details/CollegeContact";
 import { colleges } from "@/data";
 
+  
 export default function AboutPage() {
  const params = useParams();
 
@@ -26,12 +27,21 @@ export default function AboutPage() {
    return <p>Loading...</p>;
  }
 
+
+const downloadPDF = () => {
+  const link = document.createElement("a");
+  link.href = "/brochure.pdf";
+  link.download = "College-Brochure.pdf";
+  link.click();
+};
+
   return (
     <>
       <h1>{params.id}</h1>
       <Header />
       <main className="bg-gray-50 pb-20">
-        <DetailsHero college={college} />
+       <div id="brochure-content" style={{pointerEvents: "auto", position: "relative", zIndex: 0}}>
+        <DetailsHero college={college} downloadPDF={downloadPDF} />
         <DetailsTabs college={college} />
         <KeyHighlights college={college} />
         <Accreditations />
@@ -40,6 +50,15 @@ export default function AboutPage() {
         <CampusFacilities />
         <StudentCorner />
         <CollegeContact />
+        </div>
+        <div className="p-4 text-center">
+    <button
+      onClick={downloadPDF}
+      className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-medium"
+    >
+      Download Brochure
+    </button>
+  </div>
       </main>
       <Footer />
     </>

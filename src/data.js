@@ -276,15 +276,15 @@ export const courseData = {
  export const accreditations = [
   {
     title: "AICTE Approved",
-    icon: "/img/accreditation.png",
+    icon: "/img/accreditation.jpg",
   },
   {
     title: "NAAC Grade A+",
-    icon: "/img/accreditation.png",
+    icon: "/img/accreditation.jpg",
   },
   {
     title: "INI",
-    icon: "/img/accreditation.png",
+    icon: "/img/accreditation.jpg",
   },
 ];
 
@@ -370,7 +370,7 @@ export const facilities = [
   {
     title: "Courses :",
     value: "45+",
-    icon: "/img/courses1.png",
+    icon: "/img/courses1.jpg",
   },
   {
     title: "Avg Fees :",
@@ -380,7 +380,7 @@ export const facilities = [
   {
     title: "Total Seat :",
     value: "1535",
-    icon: "/img/seats.png",
+    icon: "/img/seats.jpg",
   },
   {
     title: "Campus :",

@@ -9,7 +9,7 @@ import {
   HelpCircle,
   LogIn,
   UserPlus,
-  Calculator, 
+  Calculator,
 } from "lucide-react";
 import { useEffect } from "react";
 import Image from "next/image";
@@ -28,7 +28,12 @@ export default function SidebarDrawer({ isOpen, onClose }) {
     { label: "Contact Us", icon: HelpCircle, path: "/contact" },
     { label: "Login", icon: LogIn, path: "/login" },
     { label: "Register", icon: UserPlus, path: "/register" },
-    { label: "Fee Calculator", icon: Calculator, path: "/fee-calculator" },
+    {
+      label: "Fee Calculator",
+      icon: Calculator,
+      path: "https://dream-tuition-helper.lovable.app",
+      external: true,
+    },
   ];
 
   return (
@@ -76,7 +81,11 @@ export default function SidebarDrawer({ isOpen, onClose }) {
                     whileTap={{ scale: 0.97 }}
                     className="flex items-center gap-4 py-5 border-b border-cyan-100 cursor-pointer"
                     onClick={() => {
-                      router.push(item.path);
+                      if (item.external) {
+                        window.open(item.path, "_blank");
+                      } else {
+                        router.push(item.path);
+                      }
                       onClose();
                     }}
                   >
