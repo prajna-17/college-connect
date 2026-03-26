@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { MapPin, Star, Download, ChevronRight } from "lucide-react";
 
-export default function DetailsHero({ college, downloadPDF }) {
-  console.log("downloadPDF:", downloadPDF);
+export default function DetailsHero({ college }) {
   return (
     <section className="relative w-full">
       {/* Background Image */}
@@ -62,8 +61,9 @@ export default function DetailsHero({ college, downloadPDF }) {
         <div className="flex gap-4">
           {/* Brochure Button */}
           <button
-            onClick={downloadPDF}
+            type="button"
             className="flex-1 border-2 border-cyan-500 text-sm text-cyan-600 py-3 rounded-xl cursor-pointer relative z-50"
+            onClick={() => window.open(college.brochure, "_blank")}
           >
             Brochure
           </button>

@@ -9,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-<<<<<<< HEAD
     "framer-motion": "^12.34.0",
     "html2pdf.js": "^0.14.0",
     "lucide-react": "^0.564.0",
@@ -17,11 +16,6 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-icons": "^5.5.0"
-=======
-    "next": "16.1.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
->>>>>>> a310f9b (Initial commit from Create Next App)
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

@@ -20,11 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-<<<<<<< HEAD
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
-=======
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
->>>>>>> a310f9b (Initial commit from Create Next App)
       >
         {children}
       </body>

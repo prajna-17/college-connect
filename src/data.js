@@ -8,6 +8,7 @@ export const colleges = [
     rating: "4.5",
     accreditation: "AICTE +3",
     exams: "CAT",
+    brochure:"/brochures/uttaranchal-university.pdf",
     desc: `The Uttaranchal Institute of Technology (UIT) is a leading
 engineering institute located in Dehradun, Uttarakhand, and is a
 constituent institute of Uttaranchal University. Established in
@@ -27,6 +28,7 @@ technology sector.`
   image: "/img/dit.jpeg", 
   logo: "/img/bfitLogo.png",
   rating: 4.5,
+   brochure:"/brochures/bfit-university.pdf",
   desc: `BFIT Group of Institutions, located in Dehradun, Uttarakhand, is a well-known educational institute established in 2002. It offers undergraduate and postgraduate programs in fields such as Engineering, Management, Science, and Computer Applications. The institute focuses on practical learning, modern infrastructure, and industry-oriented training to help students develop professional skills and build successful careers.`,
 
 },
@@ -37,6 +39,7 @@ technology sector.`
   image: "/img/jbit.jpeg",
   logo: "/img/jbitLogo.jpg", 
   rating: 4.5,
+   brochure:"/brochures/brochure_jbit_web.pdf",
   desc: `JB Institute of Technology (JBIT), located in Dehradun, Uttarakhand, is a well-known private engineering college established in 2009. The institute offers undergraduate programs in various engineering disciplines such as Computer Science, Mechanical, Civil, and Electrical Engineering. JBIT focuses on quality technical education, modern laboratories, experienced faculty, and industry-oriented training to prepare students for professional careers in the technology sector.`,
 },
 {
@@ -46,6 +49,7 @@ location:"Dehradun",
 image:"/img/Devbhoomi.pg.webp",
 logo:"/img/DevLogo.pg.png",
 rating:4.2,
+ brochure:"/brochures/DBUU-Brochure.pdf",
 desc:"Dev Bhoomi Uttarakhand University (DBUU) is a well-known private university located in Dehradun, surrounded by beautiful greenery and a peaceful environment. The university is recognized by UGC and several professional bodies, ensuring quality education and national-level credibility."
 },
 
@@ -56,6 +60,7 @@ location:"Dehradun",
 image:"/img/Devbhoomi.pg.webp",
 logo:"/img/DevLogo.pg.png",
 rating:4.5,
+ brochure:"/brochures/graphic_brochure.pdf",
 desc:"Graphic Era University is a reputed private university located in Dehradun, known for its quality education and modern infrastructure. It is recognized by UGC and offers a wide range of courses in Engineering, Management, Computer Applications, and other fields. The university focuses on practical learning, experienced faculty, and strong placement support, helping students build successful careers."
 },
 
@@ -66,6 +71,7 @@ location:"Dehradun",
 image:"/img/SssMc.jpg",
 logo:"/img/SssmcLogo.pg.jpg",
 rating:4.3,
+ brochure:"/brochures/subharti_brochure.pdf",
 desc:"Ras Bihari Bose Subharti University is a private university in Dehradun, established in 2016, known for its eco-friendly campus and decent infrastructure. It offers a variety of courses in fields like Science, Management, Pharmacy, Nursing, and Arts. The university focuses on practical learning, basic facilities, and skill development, making it a moderate option for students looking for affordable education in Dehradun.",
 },
 {
@@ -74,6 +80,7 @@ name:" DAV (PG)",
 location:"Dehradun",
 image:"/img/Dav.jpg",
 logo:"/img/DavLogo.png",
+ brochure:"/brochures/DAV_brochure.pdf",
 rating:4.5,
 desc:"DAV (PG) College is one of the oldest and well-known government colleges in Dehradun, affiliated with HNB Garhwal University. It offers courses in Arts, Science, Commerce, Law, and Education with affordable fees, making it a popular choice among local students. The college has decent academics, basic infrastructure, and a focus on traditional degree programs, but placements and modern facilities are limited compared to private universities.",
 },
@@ -85,6 +92,7 @@ location:"Dehradun",
 image:"/img/Nav.jpg",
 logo:"/img/NavLogo.png",
 rating:4.1,
+ brochure:"/brochures/nav-university-Brochure.pdf",
 desc:"Nav Chetna College is a private college in Dehradun, established around 2005, offering undergraduate and postgraduate courses in Arts, Science, Commerce, and some professional programs. It is affiliated with state universities and focuses on basic academic learning with practical exposure.",
 },
 
@@ -95,6 +103,7 @@ location:"Dehradun",
 image:"/img/Dolphin.webp",
 logo:"/img/DolphinLogo.jpg",
 rating:4.3,
+ brochure:"/brochures/Dolphin-brochure.pdf",
 desc:"Dolphin (PG) Institute of Biomedical & Natural Sciences is a private institute in Dehradun, established in 2002 and affiliated with HNB Garhwal University. It is mainly known for courses in biomedical, agriculture, and life sciences. The campus is green and peaceful with good labs and practical exposure, making it a decent option for science students. However, placements are average, so it’s better suited for students focusing on academics or higher studies.",
 }
 ];

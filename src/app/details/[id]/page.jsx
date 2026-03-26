@@ -28,12 +28,6 @@ export default function AboutPage() {
  }
 
 
-const downloadPDF = () => {
-  const link = document.createElement("a");
-  link.href = "/brochure.pdf";
-  link.download = "College-Brochure.pdf";
-  link.click();
-};
 
   return (
     <>
@@ -41,7 +35,7 @@ const downloadPDF = () => {
       <Header />
       <main className="bg-gray-50 pb-20">
        <div id="brochure-content" style={{pointerEvents: "auto", position: "relative", zIndex: 0}}>
-        <DetailsHero college={college} downloadPDF={downloadPDF} />
+        <DetailsHero college={college} />
         <DetailsTabs college={college} />
         <KeyHighlights college={college} />
         <Accreditations />
@@ -52,12 +46,7 @@ const downloadPDF = () => {
         <CollegeContact />
         </div>
         <div className="p-4 text-center">
-    <button
-      onClick={downloadPDF}
-      className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-medium"
-    >
-      Download Brochure
-    </button>
+    
   </div>
       </main>
       <Footer />
