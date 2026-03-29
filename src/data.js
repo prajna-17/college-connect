@@ -57,8 +57,8 @@ desc:"Dev Bhoomi Uttarakhand University (DBUU) is a well-known private universit
   id:"GRU",
 name:"Graphic Era University",
 location:"Dehradun",
-image:"/img/Devbhoomi.pg.webp",
-logo:"/img/DevLogo.pg.png",
+image:"/img/Graphic.png",
+logo:"/img/GraphicLogo.png",
 rating:4.5,
  brochure:"/brochures/graphic_brochure.pdf",
 desc:"Graphic Era University is a reputed private university located in Dehradun, known for its quality education and modern infrastructure. It is recognized by UGC and offers a wide range of courses in Engineering, Management, Computer Applications, and other fields. The university focuses on practical learning, experienced faculty, and strong placement support, helping students build successful careers."
