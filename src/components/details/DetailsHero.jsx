@@ -4,29 +4,17 @@ import Image from "next/image";
 import { MapPin, Star, ChevronRight } from "lucide-react";
 
 export default function DetailsHero({ college }) {
-  const handleDownload = async () => {
-    try {
-      const response = await fetch(college.brochure);
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = college.brochure;
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch brochure");
-      }
+    // original file name from path
+    const fileName = college.brochure.split("/").pop() || "brochure.pdf";
+    link.setAttribute("download", fileName);
 
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = `${college.name.replace(/\s+/g, "-")}-brochure.pdf`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-
-      window.URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error("Download failed:", error);
-      alert("Brochure download failed");
-    }
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
