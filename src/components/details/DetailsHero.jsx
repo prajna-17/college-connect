@@ -9,7 +9,7 @@ export default function DetailsHero({ college }) {
 
     const link = document.createElement("a");
     link.href = `/api/download-brochure?file=${encodeURIComponent(fileName)}`;
-    link.download = fileName;
+    link.setAttribute("download", fileName);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

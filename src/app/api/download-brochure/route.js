@@ -1,46 +1,40 @@
 import { NextResponse } from "next/server";
-import fs from "fs";
 import path from "path";
 
 export async function GET(request) {
   try {
-    const { searchParams } = new URL(request.url);
+    const { searchParams, origin } = new URL(request.url);
     const file = searchParams.get("file");
 
     if (!file) {
-      return NextResponse.json(
-        { error: "File parameter is required" },
-        { status: 400 }
-      );
+      return new NextResponse("Missing file parameter", { status: 400 });
     }
 
-    // stop path traversal
     const safeFileName = path.basename(file);
+    const pdfUrl = `${origin}/brochures/${encodeURIComponent(safeFileName)}`;
 
-    const filePath = path.join(process.cwd(), "public", "brochures", safeFileName);
+    const pdfResponse = await fetch(pdfUrl);
 
-    if (!fs.existsSync(filePath)) {
-      return NextResponse.json(
-        { error: "File not found" },
+    if (!pdfResponse.ok) {
+      return new NextResponse(
+        `Failed to fetch brochure. Status: ${pdfResponse.status}`,
         { status: 404 }
       );
     }
 
-    const fileBuffer = fs.readFileSync(filePath);
+    const arrayBuffer = await pdfResponse.arrayBuffer();
 
-    return new NextResponse(fileBuffer, {
+    return new NextResponse(arrayBuffer, {
       status: 200,
       headers: {
         "Content-Type": "application/pdf",
         "Content-Disposition": `attachment; filename="${safeFileName}"`,
-        "Content-Length": fileBuffer.length.toString(),
+        "Content-Length": String(arrayBuffer.byteLength),
+        "Cache-Control": "public, max-age=3600",
       },
     });
   } catch (error) {
-    console.error("Download error:", error);
-    return NextResponse.json(
-      { error: "Failed to download file" },
-      { status: 500 }
-    );
+    console.error("Download brochure error:", error);
+    return new NextResponse("Failed to download brochure", { status: 500 });
   }
 }
