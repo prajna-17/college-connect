@@ -43,7 +43,7 @@ export default function Footer() {
         <Image src="/img/linkedin.png" alt="LinkedIn" width={28} height={28} />
         <Image src="/img/facebook.png" alt="Facebook" width={28} height={28} />
         <Image
-          src="/img/instagram.png"
+          src="/img/instagram.jpg"
           alt="Instagram"
           width={28}
           height={28}

@@ -1,6 +1,5 @@
 "use client";
-
-import { Search } from "lucide-react";
+import SearchBar from "./SearchBar";
 
 export default function Hero() {
   return (
@@ -31,20 +30,9 @@ export default function Hero() {
         </p>
 
         {/* Search Bar */}
-        <div className="mt-8 w-full max-w-md">
-          <div className="flex items-center bg-gradient-to-r from-orange-400 to-orange-500 rounded-xl px-4 py-3 shadow-lg">
-            <Search className="text-white mr-3" size={20} />
-
-            <input
-              type="text"
-              placeholder="Search colleges, courses..."
-              className="flex-grow bg-transparent outline-none text-white placeholder-white text-base"
-            />
-
-            <span className="ml-3 text-white text-xl">›</span>
-          </div>
+         <SearchBar />
         </div>
-      </div>
+      
     </section>
   );
 }
