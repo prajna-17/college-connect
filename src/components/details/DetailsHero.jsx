@@ -1,9 +1,34 @@
 "use client";
 
 import Image from "next/image";
-import { MapPin, Star, Download, ChevronRight } from "lucide-react";
+import { MapPin, Star, ChevronRight } from "lucide-react";
 
 export default function DetailsHero({ college }) {
+  const handleDownload = async () => {
+    try {
+      const response = await fetch(college.brochure);
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch brochure");
+      }
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `${college.name.replace(/\s+/g, "-")}-brochure.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Download failed:", error);
+      alert("Brochure download failed");
+    }
+  };
+
   return (
     <section className="relative w-full">
       {/* Background Image */}
@@ -39,9 +64,7 @@ export default function DetailsHero({ college }) {
               {/* Location */}
               <div className="flex items-center gap-2 mt-2 text-sm">
                 <MapPin className="text-red-500" size={18} />
-                <span>
-                  <p>{college.location}</p>
-                </span>
+                <span>{college.location}</span>
               </div>
 
               {/* Rating */}
@@ -62,11 +85,12 @@ export default function DetailsHero({ college }) {
           {/* Brochure Button */}
           <button
             type="button"
-            className="flex-1 border-2 border-cyan-500 text-sm text-cyan-600 py-3 rounded-xl cursor-pointer relative z-50"
-            onClick={() => window.open(college.brochure, "_blank")}
+            className="flex-1 border-2 border-cyan-500 text-sm text-cyan-600 py-3 rounded-xl cursor-pointer relative z-50 hover:bg-cyan-50 transition"
+            onClick={handleDownload}
           >
             Brochure
           </button>
+
           {/* Start Application Button */}
           <button
             onClick={() => alert("Start Application")}
