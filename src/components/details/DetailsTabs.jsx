@@ -1,11 +1,12 @@
 "use client";
 
-
+import PlacementSection from "./PlacementSection";
 import { useState } from "react";
+import CoursesAndFees from "./CoursesAndFees"; 
 
 const tabs = ["Info", "Courses & Fees", "Cutoff", "Placement"];
 
-export default function DetailsTabs({college}) {
+export default function DetailsTabs({ college }) {
   const [activeTab, setActiveTab] = useState("Info");
 
   return (
@@ -31,21 +32,80 @@ export default function DetailsTabs({college}) {
       <div className="mt-6">
         {activeTab === "Info" && (
           <div>
-            <h2 className="text-xl font-semibold mb-3">More About {college.name}</h2>
+            <h2 className="text-xl font-semibold mb-3">
+              More About {college.name}
+            </h2>
             <p className="text-black font-medium leading-relaxed text-[15px]">
-             {college.desc}
+              {college.desc}
             </p>
           </div>
         )}
-
         {activeTab === "Courses & Fees" && (
-          <p className="text-black">Courses & Fees Content</p>
+  <CoursesAndFees data={college.coursesAndFees} />
+)}
+        {activeTab === "Cutoff" && (
+          <div>
+            <h2 className="text-xl font-semibold mb-4">Cutoff 2026</h2>
+            {college.cutoff && college.cutoff.length > 0 ? (
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border-collapse">
+                  <thead>
+                    <tr className="bg-cyan-500 text-white">
+                      <th className="px-4 py-3 text-left rounded-tl-xl">
+                        Course
+                      </th>
+                      <th className="px-4 py-3 text-center">General</th>
+                      <th className="px-4 py-3 text-center">OBC</th>
+                      <th className="px-4 py-3 text-center">SC</th>
+                      <th className="px-4 py-3 text-center rounded-tr-xl">
+                        ST
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {college.cutoff.map((row, index) => (
+                      <tr
+                        key={index}
+                        className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}
+                      >
+                        <td className="px-4 py-3 font-medium text-black">
+                          {row.course}
+                        </td>
+                        <td className="px-4 py-3 text-center text-black">
+                          {row.general}
+                        </td>
+                        <td className="px-4 py-3 text-center text-black">
+                          {row.obc}
+                        </td>
+                        <td className="px-4 py-3 text-center text-black">
+                          {row.sc}
+                        </td>
+                        <td className="px-4 py-3 text-center text-black">
+                          {row.st}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : (
+              <p className="text-gray-500">
+                Is college ka cutoff data abhi available nahi hai.
+              </p>
+            )}
+          </div>
         )}
 
-        {activeTab === "Cutoff" && <p className="text-black">Cutoff Content</p>}
-
         {activeTab === "Placement" && (
-          <p className="text-black">Placement Content</p>
+          <div className="p-4">
+            {college.placement ? (
+              <PlacementSection data={college.placement} />
+            ) : (
+              <p className="text-gray-500 text-sm">
+                Placement data not available.
+              </p>
+            )}
+          </div>
         )}
       </div>
     </section>

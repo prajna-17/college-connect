@@ -11,12 +11,13 @@ export default function Header() {
       {/* Logo */}
       <div className="flex items-center">
         <Image
-  src="/img/logo.png"
-  width={80}
-  height={40}
-  priority
-  className="h-10 w-auto"
-/>
+          src="/img/logo.png"
+          width={80}
+          height={40}
+          priority
+          alt="College Connect Logo"
+          className="h-10 w-auto"
+        />
       </div>
 
       {/* Right Icons */}
